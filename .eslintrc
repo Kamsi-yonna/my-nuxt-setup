@@ -1,0 +1,28 @@
+{
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "root": true,
+  "rules": {
+    /* Rules can be found in ./.eslrules/*.eslintrc* */
+  },
+  "parser": "vue-eslint-parser",
+  "extends": [
+    "prettier",
+    "@nuxtjs/eslint-config-typescript",
+    "plugin:vue/vue3-essential",
+    "./.eslrules/.base.eslintrc",
+    "./.eslrules/.vue.eslintrc",
+    "./.eslrules/.ts.eslintrc",
+    "./.eslrules/.others.eslintrc"
+  ],
+  "plugins": ["@typescript-eslint", "prefer-arrow-functions", "import"],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": ["tsconfig.json"],
+    "extraFileExtensions": [".vue"]
+  }
+}
